@@ -1,0 +1,23 @@
+input[type="password"]{
+    background-color: brown;
+    border-color: red;
+    border: 1px solid 
+}
+button:hover{
+    background-color: blue;
+    color: white;
+}
+input::placeholder {
+  color: gray;               
+}
+h3::before{
+    content:"✌️";
+}
+p{
+    background-color: black;
+    color: white;
+    border: 3px solid red;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
