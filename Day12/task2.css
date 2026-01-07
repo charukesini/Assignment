@@ -1,0 +1,82 @@
+.navbar{
+    display: flex;
+    gap: 20px;
+    background-color: grey;
+    height: 30px;
+    
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    background-color: aqua;
+    margin-top: 30px;
+}
+h2{
+    background-color: blueviolet;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    margin: 30px;
+    padding: 20px;
+    gap: 60px;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+.gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);;
+      gap: 10px;
+      padding: 20px;
+      background-color:rgb(188, 200, 16)
+    }
+
+    .gallery img {
+    width: 100px;
+     height: 200px;       
+    /* object-fit: cover; */ 
+    }
+    .dashboard {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main";
+      grid-template-columns: 200px 1fr;
+      gap: 10px;
+      padding: 20px;
+      height: 300px;
+    }
+
+    .header {
+      grid-area: header;
+      background: #4caf50;
+      color: white;
+      padding: 15px;
+    }
+     .sidebar {
+      grid-area: sidebar;
+      background: #8f4242;
+      padding: 15px;
+    }
+
+    .main {
+      grid-area: main;
+      background: #8b0d0d;
+      padding: 15px;
+    }
+    .float-layout img {
+      float: left;
+      width: 120px;
+      margin-right: 10px;
+    }
+    .flex-layout {
+      display: flex;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .flex-layout img {
+      width: 120px;
+    }
+

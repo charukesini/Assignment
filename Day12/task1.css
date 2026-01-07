@@ -1,0 +1,40 @@
+.flex-container {
+      display: flex;
+      gap: 15px;              
+      margin-bottom: 30px;
+      background-color: blue;
+      width: 500px;
+      height: 70px;
+    }
+
+    .flexitem {
+      /* flex: 1; */
+      background-color: #a60e28;
+      padding: 20px;
+      text-align: center;
+      border: 2px solid black;
+      height: 5px;
+      width: 5px;
+    }
+    .center-parent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width: 100px;
+      background-color: #eee;
+      /* margin-bottom: 300px; */
+      margin-left: 700px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;         
+    }
+
+    .grid-item {
+      background-color: #4e1698;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
