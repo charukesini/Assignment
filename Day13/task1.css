@@ -1,0 +1,58 @@
+
+    body {
+      font-family: Arial;
+      background-color: lightblue;   
+      font-size: 18px;
+    }
+
+    .flex-box {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .flex-box div {
+      background: orange;
+      padding: 15px;
+      flex: 1;
+      text-align: center;
+    }
+
+    .grid-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .grid-box div {
+      background: #4caf50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+
+      body {
+        background-color: lightcoral;
+      }
+
+      body {
+        font-size: 14px;
+      }
+
+      .flex-box {
+        flex-direction: column;
+      }
+
+      .hide-text {
+        display: none;
+      }
+
+      .grid-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  
