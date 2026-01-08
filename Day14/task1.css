@@ -1,0 +1,29 @@
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+
+      animation-name: moveBox;
+      animation-duration: 3s;
+      animation-delay: 1s;          /* 3️⃣ Start late */
+      animation-iteration-count: infinite; /* 4️⃣ Repeat forever */
+      animation-direction: alternate;
+    }
+
+    @keyframes moveBox {
+      from {
+        left: 0;
+        background-color: red;
+      }
+      to {
+        left: 300px;
+        background-color: blue;
+      }
+    }
+
+    .box:hover {
+      animation-play-state: paused;
+    }
+
+  
