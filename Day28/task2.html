@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+<h3>1. Safe Calculator</h3>
+<input id="n1" placeholder="Number 1">
+<input id="n2" placeholder="Number 2">
+<button onclick="calculate()">Divide</button>
+<p id="calcResult"></p>
+
+<hr>
+
+<h3>2. JSON Parser</h3>
+<textarea id="jsonText" placeholder='{"name":"Asha"}'></textarea>
+<button onclick="parseJSON()">Parse JSON</button>
+<p id="jsonResult"></p>
+
+<hr>
+
+<h3>3. Login Validation</h3>
+<input id="user" placeholder="Username">
+<input id="pass" placeholder="Password">
+<button onclick="login()">Login</button>
+<p id="loginMsg"></p>
+
+<hr>
+
+<h3>4 & 5. Debug + Custom Error Message</h3>
+<button onclick="brokenCode()">Run Broken Code</button>
+<p id="errorMsg"></p>
+
+<script>
+
+function calculate() {
+  try {
+    let a = Number(n1.value);
+    let b = Number(n2.value);
+
+    if (b === 0) {
+      throw "Cannot divide by zero";
+    }
+
+    calcResult.innerText = a / b;
+  } catch (e) {
+    calcResult.innerText = e;
+  }
+}
+
+
+function parseJSON() {
+  try {
+    let obj = JSON.parse(jsonText.value);
+    jsonResult.innerText = "Name: " + obj.name;
+  } catch (e) {
+    jsonResult.innerText = "Invalid JSON format";
+  }
+}
+
+
+function login() {
+  try {
+    if (user.value === "" || pass.value === "") {
+      throw "All fields required";
+    }
+
+    if (user.value === "admin" && pass.value === "123") {
+      loginMsg.innerText = "Login Success";
+    } else {
+      throw "Invalid credentials";
+    }
+  } catch (e) {
+    loginMsg.innerText = e;
+  }
+}
+
+
+function brokenCode() {
+  try {
+    console.log(x); // error
+  } catch (e) {
+    errorMsg.innerText = "Custom Error: Variable not defined";
+  }
+}
+</script>
+
+
+
+
+</body>
+</html>

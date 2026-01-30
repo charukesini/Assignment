@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h3>JavaScript Errors – One Code Demo</h3>
+
+<script>
+/*
+  An error is a mistake that stops the program from running correctly.
+*/
+
+
+/*
+2️⃣ Syntax Error vs Runtime Error
+--------------------------------
+Syntax Error: Mistake in writing code (JS cannot even start)
+Runtime Error: Code runs, but error happens while executing
+*/
+
+
+try {
+  console.log(x);   // x is not defined
+} catch (error) {
+  console.log("Runtime Error caught:", error.message);
+}
+
+
+
+
+let a = 10;
+let b = 5;
+
+
+let result = a - b;
+console.log("Logical Error Result:", result); // Wrong output
+
+
+
+
+try {
+  let num = 10;
+  console.log(num.toUpperCase()); 
+} catch (err) {
+  console.log("Error handled using try-catch");
+}
+
+
+/*
+ Help identify mistakes
+ Prevent program crash
+ Improve debugging skills
+*/
+
+console.log("Program continues safely after errors");
+
+</script>
+
+</body>
+</html>
