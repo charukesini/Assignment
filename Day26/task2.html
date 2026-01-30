@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  
+  <h3>1. Text Changer</h3>
+  <p id="text">Hello World</p>
+  <button id="changeText">Change Text</button>
+
+  <hr>
+
+  
+  <h3>2. Theme Changer</h3>
+  <button id="themeBtn">Toggle Light / Dark</button>
+
+  <hr>
+
+  
+  <h3>3. Todo List</h3>
+  <input type="text" id="todoInput" placeholder="Enter task">
+  <button id="addTodo">Add Todo</button>
+  <ul id="todoList"></ul>
+
+  <hr>
+
+  
+  <h3>4. Add & Remove Items</h3>
+  <button id="addItem">Add Item</button>
+  <button id="removeItem">Remove Item</button>
+  <ul id="itemList"></ul>
+
+  <hr>
+
+  
+  <h3>5. Counter</h3>
+  <button id="minus">-</button>
+  <span id="count">0</span>
+  <button id="plus">+</button>
+
+  <script>
+    
+    document.getElementById("changeText").addEventListener("click", function () {
+      document.getElementById("text").innerText = "Text Changed!";
+    });
+
+    
+    document.getElementById("themeBtn").addEventListener("click", function () {
+      document.body.classList.toggle("dark");
+    });
+
+    document.getElementById("addTodo").addEventListener("click", function () {
+      let value = document.getElementById("todoInput").value;
+
+      if (value !== "") {
+        let li = document.createElement("li");
+        li.innerText = value;
+        document.getElementById("todoList").appendChild(li);
+        document.getElementById("todoInput").value = "";
+      }
+    });
+
+    
+    document.getElementById("addItem").addEventListener("click", function () {
+      let li = document.createElement("li");
+      li.innerText = "New Item";
+      document.getElementById("itemList").appendChild(li);
+    });
+
+    document.getElementById("removeItem").addEventListener("click", function () {
+      let list = document.getElementById("itemList");
+      if (list.lastChild) {
+        list.removeChild(list.lastChild);
+      }
+    });
+
+
+    let count = 0;
+
+    document.getElementById("plus").addEventListener("click", function () {
+      count++;
+      document.getElementById("count").innerText = count;
+    });
+
+    document.getElementById("minus").addEventListener("click", function () {
+      count--;
+      document.getElementById("count").innerText = count;
+    });
+  </script>
+
+</body>
+</html>
