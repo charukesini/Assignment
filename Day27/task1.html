@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p>An event is an action done by the user or browser.
+    1. Clicking a button 
+    2. Moving the mouse</p>
+    <button onclick="showMsg()">Click</button>
+
+<button id="myBtn">Click Me</button>
+
+<input type="text" id="box" placeholder="Type something">
+
+<div id="parent"> Parent </div>
+  <button id="child">Child</button>
+
+
+<script>
+myBtn.addEventListener("click", function () {
+  alert("Button clicked!");
+});
+
+box.addEventListener("keydown", function (event) {
+  console.log("Key pressed:", event.key);
+});
+
+parent.addEventListener("click", () => {
+  alert("Parent clicked");
+});
+
+child.addEventListener("click", () => {
+  alert("Child clicked");
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<h3>Click Counter</h3>
+<button onclick="countClick()">Click</button>
+<p id="count">0</p>
+
+<hr>
+
+
+<h3>Keyboard Typing Detector</h3>
+<input onkeydown="detectKey(event)" placeholder="Type here">
+
+<hr>
+
+
+<h3>Live Input Preview</h3>
+<input oninput="showText(this.value)">
+<p id="preview"></p>
+
+<hr>
+
+
+<h3>Form Validator</h3>
+<form onsubmit="return validateForm()">
+  <input id="name" placeholder="Enter name">
+  <button>Submit</button>
+</form>
+
+<hr>
+
+
+<h3>Nested Click Logger</h3>
+<div onclick="parentClick()" style="padding:20px; background:lightblue;">
+  Parent
+  <button onclick="childClick()">Child</button>
+</div>
+
+<script>
+
+let c = 0;
+function countClick() {
+  c++;
+  document.getElementById("count").innerText = c;
+}
+
+
+function detectKey(e) {
+  console.log("Key pressed:", e.key);
+}
+
+
+function showText(val) {
+  document.getElementById("preview").innerText = val;
+}
+
+
+function validateForm() {
+  if (document.getElementById("name").value === "") {
+    alert("Name required");
+    return false;
+  }
+  alert("Form submitted");
+  return true;
+}
+
+
+function parentClick() {
+  console.log("Parent clicked");
+}
+function childClick() {
+  console.log("Child clicked");
+}
+</script>
+
+
+</body>
+</html>
